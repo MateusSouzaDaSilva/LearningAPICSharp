@@ -13,7 +13,7 @@ namespace LearningWebAPI.Controllers
             if (username == "mateus" && password == "12345")
             {
                 var token = TokenService.GenerateToken(new Model.Employee());
-                return Ok("Bearer " + token.ToString());
+                return Ok(token);
             }
             return BadRequest("Username or password invalid");
         }
