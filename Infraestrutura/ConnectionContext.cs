@@ -1,4 +1,4 @@
-﻿using LearningWebAPI.Model;
+﻿using LearningWebAPI.Domain.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace LearningWebAPI.Infraestrutura

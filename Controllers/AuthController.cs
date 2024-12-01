@@ -1,4 +1,4 @@
-﻿using LearningWebAPI.Services;
+﻿using LearningWebAPI.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LearningWebAPI.Controllers
@@ -12,7 +12,7 @@ namespace LearningWebAPI.Controllers
         {
             if (username == "mateus" && password == "12345")
             {
-                var token = TokenService.GenerateToken(new Model.Employee());
+                var token = TokenService.GenerateToken(new Domain.Model.Employee());
                 return Ok(token);
             }
             return BadRequest("Username or password invalid");

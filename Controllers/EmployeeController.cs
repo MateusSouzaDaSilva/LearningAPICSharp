@@ -1,5 +1,7 @@
-﻿using LearningWebAPI.Model;
-using LearningWebAPI.ViewModel;
+﻿using AutoMapper;
+using LearningWebAPI.Application.ViewModel;
+using LearningWebAPI.Domain.DTOs;
+using LearningWebAPI.Domain.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,11 +15,13 @@ namespace LearningWebAPI.Controllers
 
         private readonly IEmployeeRepository _employeeRepository;
         private readonly ILogger<EmployeeController> _logger;
+        private readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger)
+        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger, IMapper mapper)
         {
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         // Precisa criar o construtor para importar o repository
@@ -48,10 +52,9 @@ namespace LearningWebAPI.Controllers
         {
             _logger.Log(LogLevel.Error, "Teve um erro");
 
-            throw new Exception("Erro de teste");
 
             var employees = _employeeRepository.Get(pageNumber, pageQuantity);
-            _logger.LogInformation("Teste");
+            
             return Ok(employees);
         }
 
@@ -65,6 +68,18 @@ namespace LearningWebAPI.Controllers
             var dataBytes = System.IO.File.ReadAllBytes(employee.photo);
 
             return File(dataBytes, "image/png");
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult Search(int id)
+        {
+
+
+            var employees = _employeeRepository.GetById(id);
+
+            var employeesDTOS = _mapper.Map<EmployeeDTO>(employees);
+            return Ok(employeesDTOS);
         }
 
     }

@@ -1,10 +1,10 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using LearningWebAPI.Model;
+using LearningWebAPI.Domain.Model;
 using Microsoft.IdentityModel.Tokens;
 
-namespace LearningWebAPI.Services
+namespace LearningWebAPI.Application.Services
 {
     public class TokenService
     {
@@ -15,7 +15,7 @@ namespace LearningWebAPI.Services
             var key = Encoding.ASCII.GetBytes(Key.Secret);
             var tokenConfig = new SecurityTokenDescriptor
             {
-                Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]
+                Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim("employeeId", employee.id.ToString()),
                 }),

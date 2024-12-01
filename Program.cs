@@ -1,8 +1,9 @@
 using System.Security.Cryptography.Xml;
 using System.Text;
 using LearningWebAPI;
-using LearningWebAPI.Infraestrutura;
-using LearningWebAPI.Model;
+using LearningWebAPI.Application.Mapping;
+using LearningWebAPI.Domain.Model;
+using LearningWebAPI.Infraestrutura.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -12,6 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen( c =>

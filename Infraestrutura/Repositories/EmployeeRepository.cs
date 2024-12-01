@@ -1,6 +1,7 @@
-﻿using LearningWebAPI.Model;
+﻿using LearningWebAPI.Domain.DTOs;
+using LearningWebAPI.Domain.Model;
 
-namespace LearningWebAPI.Infraestrutura
+namespace LearningWebAPI.Infraestrutura.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {
@@ -12,9 +13,14 @@ namespace LearningWebAPI.Infraestrutura
 
         }
 
-        public List<Employee> Get(int pageNumber, int pageQuantity)
+        public List<EmployeeDTO> Get(int pageNumber, int pageQuantity)
         {
-            return _context.Employees.Skip(pageNumber * pageQuantity).Take(pageQuantity).ToList();
+            return _context.Employees.Skip(pageNumber * pageQuantity).Take(pageQuantity).Select( b => new EmployeeDTO()
+            {
+                Id = b.id,
+                NameEmployee = b.name,
+                Photo = b.photo
+            }).ToList();
 
         }
 

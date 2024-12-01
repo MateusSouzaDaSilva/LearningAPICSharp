@@ -69,6 +69,22 @@
   },
   {
     "ContainingType": "LearningWebAPI.Controllers.EmployeeController",
+    "Method": "Search",
+    "RelativePath": "api/v1/employee/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LearningWebAPI.Controllers.EmployeeController",
     "Method": "DownloadPhoto",
     "RelativePath": "api/v1/employee/{id}/download",
     "HttpMethod": "POST",

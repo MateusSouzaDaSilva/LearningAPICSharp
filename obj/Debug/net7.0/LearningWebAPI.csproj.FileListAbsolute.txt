@@ -48,3 +48,5 @@ D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\obj\Debug\net7.0\refint\Learnin
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\obj\Debug\net7.0\LearningWebAPI.pdb
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\obj\Debug\net7.0\LearningWebAPI.genruntimeconfig.cache
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\obj\Debug\net7.0\ref\LearningWebAPI.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\AutoMapper.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
