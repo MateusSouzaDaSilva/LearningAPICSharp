@@ -73,9 +73,19 @@ builder.Services.AddSwaggerGen( c =>
 builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerGenOptions>();
 
+// adicionando CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MyPolicy", policy =>
+    {
+        policy.WithOrigins("http://localhost:8080")
+        .AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 var key = Encoding.ASCII.GetBytes(Key.Secret);
 
-
+// Autenticação
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -115,6 +125,7 @@ else
     app.UseExceptionHandler("/error");
 }
 
+app.UseCors("MyPolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
