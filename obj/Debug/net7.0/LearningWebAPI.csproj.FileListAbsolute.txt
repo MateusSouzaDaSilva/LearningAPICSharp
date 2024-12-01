@@ -50,3 +50,8 @@ D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\obj\Debug\net7.0\LearningWebAPI
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\obj\Debug\net7.0\ref\LearningWebAPI.dll
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\AutoMapper.dll
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Humanizer.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\System.CodeDom.dll

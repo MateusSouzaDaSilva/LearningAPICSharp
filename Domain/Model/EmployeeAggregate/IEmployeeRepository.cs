@@ -1,6 +1,6 @@
 ﻿using LearningWebAPI.Domain.DTOs;
 
-namespace LearningWebAPI.Domain.Model
+namespace LearningWebAPI.Domain.Model.EmployeeAggregate
 {
     public interface IEmployeeRepository
     {

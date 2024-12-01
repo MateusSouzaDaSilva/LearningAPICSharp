@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using LearningWebAPI.Application.ViewModel;
 using LearningWebAPI.Domain.DTOs;
-using LearningWebAPI.Domain.Model;
+using LearningWebAPI.Domain.Model.EmployeeAggregate;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -74,7 +74,6 @@ namespace LearningWebAPI.Controllers
         [Route("{id}")]
         public IActionResult Search(int id)
         {
-
 
             var employees = _employeeRepository.GetById(id);
 

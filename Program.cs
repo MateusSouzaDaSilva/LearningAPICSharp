@@ -2,7 +2,7 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using LearningWebAPI;
 using LearningWebAPI.Application.Mapping;
-using LearningWebAPI.Domain.Model;
+using LearningWebAPI.Domain.Model.EmployeeAggregate;
 using LearningWebAPI.Infraestrutura.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;

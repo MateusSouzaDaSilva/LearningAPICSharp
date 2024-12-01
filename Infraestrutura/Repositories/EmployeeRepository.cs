@@ -1,5 +1,5 @@
 ﻿using LearningWebAPI.Domain.DTOs;
-using LearningWebAPI.Domain.Model;
+using LearningWebAPI.Domain.Model.EmployeeAggregate;
 
 namespace LearningWebAPI.Infraestrutura.Repositories
 {

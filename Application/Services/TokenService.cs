@@ -1,7 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using LearningWebAPI.Domain.Model;
+using LearningWebAPI.Domain.Model.EmployeeAggregate;
 using Microsoft.IdentityModel.Tokens;
 
 namespace LearningWebAPI.Application.Services
