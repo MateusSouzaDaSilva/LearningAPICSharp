@@ -49,3 +49,4 @@ D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net8.0\Microsoft.Exte
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net8.0\Npgsql.dll
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\obj\Debug\net8.0\LearningWebAPI.sourcelink.json

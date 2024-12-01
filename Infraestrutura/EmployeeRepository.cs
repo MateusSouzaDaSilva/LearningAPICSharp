@@ -17,5 +17,10 @@ namespace LearningWebAPI.Infraestrutura
         {
             return _context.Employees.ToList();
         }
+
+        public Employee? GetById(int id)
+        {
+            return _context.Employees.Find(id);
+        }
     }
 }
