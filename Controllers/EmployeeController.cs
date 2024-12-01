@@ -1,5 +1,6 @@
 ﻿using LearningWebAPI.Model;
 using LearningWebAPI.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LearningWebAPI.Controllers
@@ -19,6 +20,8 @@ namespace LearningWebAPI.Controllers
         }
 
         // fromForm para receber atributos como se fosse um formulário
+        // AUthorize determina que a rota necessita de autenticação
+        [Authorize]
         [HttpPost]
         public IActionResult Add([FromForm]EmployeeViewModel employeeView)
         {
@@ -35,6 +38,7 @@ namespace LearningWebAPI.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -42,6 +46,7 @@ namespace LearningWebAPI.Controllers
             return Ok(employees);
         }
 
+        [Authorize]
         [HttpPost]
         [Route("{id}/download")]
         public IActionResult DownloadPhoto(int id)
