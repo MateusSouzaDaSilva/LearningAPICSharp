@@ -5,11 +5,12 @@ using LearningWebAPI.Domain.Model.EmployeeAggregate;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LearningWebAPI.Controllers
+namespace LearningWebAPI.Controllers.v2
 {
     // Se utiliza o ControllerBase porque ele não tem suporte à view
     [ApiController]
-    [Route("api/v1/employee")]
+    [Route("api/v{version:apiVersion}/employee")]
+    [ApiVersion("2.0")]
     public class EmployeeController : ControllerBase
     {
 

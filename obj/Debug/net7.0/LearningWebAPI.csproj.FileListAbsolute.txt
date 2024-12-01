@@ -55,3 +55,5 @@ D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Microsoft.Enti
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\System.CodeDom.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\Projetos\CSharp\LearningWebAPI\LearningWebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
